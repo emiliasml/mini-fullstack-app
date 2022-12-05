@@ -1,0 +1,53 @@
+<h1 mat-dialog-title>{{ editMode ? "Edit user" : "Add new user" }}</h1>
+<div mat-dialog-content>
+  <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+    <mat-form-field class="user-field">
+      <input
+        formControlName="firstName"
+        matInput
+        placeholder="First Name"
+        required
+      />
+      <mat-error
+        *ngIf="
+          userForm.controls['firstName'].hasError('required') &&
+          userForm.get('firstName')?.touched
+        "
+      >
+        Please enter the first name of the user
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field class="user-field">
+      <input formControlName="lastName" matInput placeholder="Last Name" />
+      <mat-error
+        *ngIf="
+          userForm.controls['lastName'].hasError('required') &&
+          userForm.get('lastName')?.touched
+        "
+      >
+        Please enter the last name of the user
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field class="user-field">
+      <input
+        formControlName="age"
+        matInput
+        placeholder="Age"
+        type="number"
+        min="0"
+      />
+      <mat-error
+        *ngIf="
+          userForm.controls['age'].hasError('required') &&
+          userForm.get('age')?.touched
+        "
+      >
+        Please enter the age of the user
+      </mat-error>
+    </mat-form-field>
+  </form>
+</div>
+<div mat-dialog-actions class="dialog-actions">
+  <button mat-button mat-dialog-close>Cancel</button>
+  <button mat-button (click)="onSubmit()" cdkFocusInitial>Save</button>
+</div>

@@ -1,0 +1,25 @@
+.main-page-container {
+  margin: 2rem;
+}
+
+table {
+  width: 100%;
+}
+
+.nameFormField {
+  color: grey; /* here I would have used global styles, but I didn't see the necessity in such a small app*/
+}
+
+.actionsDiv {
+  display: flex;
+  justify-content: space-between;
+  height: 4rem;
+}
+
+.createBtn {
+  margin: 0.5rem 0 0.5rem 0;
+}
+
+.actionsCell {
+  width: 5rem;
+}
