@@ -1,10 +1,11 @@
 # mini-fullstack-app
 
 Small fullstack app for CRUD functionalities.
-    - on both frontend and backend, install node-modules using 'npm install' 
-    - start the backend using the command 'npm start'
-    - start the frontendAngular using the comand 'ng serve --open'
-http://localhost:3000/users
+- on both frontend and backend, install node-modules using 'npm install' 
+- start the backend using the command 'npm start'
+- start the frontendAngular using the comand 'ng serve --open'
+- the backend will run on port http://localhost:3000/users
+- the frontend will (most likely) run on http://localhost:4200
 
     Challenge:
 
